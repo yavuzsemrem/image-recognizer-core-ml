@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="image_recognizer_core_ml" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="steak night" translatesAutoresizingMaskIntoConstraints="NO" id="7p0-pU-kkU">
+                                <rect key="frame" x="40" y="120" width="313" height="275"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="275" id="2ye-pL-v8G"/>
+                                    <constraint firstAttribute="width" constant="313" id="zfo-UU-XB5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlK-Wg-oM5">
+                                <rect key="frame" x="40" y="445" width="313" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="313" id="7Q2-mR-zR8"/>
+                                    <constraint firstAttribute="height" constant="127" id="PnQ-Rv-6oq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGg-Vl-a9A">
+                                <rect key="frame" x="111" y="617" width="170" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="bpr-if-YzA"/>
+                                    <constraint firstAttribute="width" constant="170" id="pfU-Mr-0y1"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Guess"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5LZ-bX-yq5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vGg-Vl-a9A" secondAttribute="bottom" constant="131" id="44d-b0-1Rs"/>
+                            <constraint firstItem="7p0-pU-kkU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="7RF-no-Rqw"/>
+                            <constraint firstItem="LlK-Wg-oM5" firstAttribute="top" secondItem="7p0-pU-kkU" secondAttribute="bottom" constant="50" id="GNS-SJ-xvh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vGg-Vl-a9A" secondAttribute="trailing" constant="112" id="OqG-hm-iWl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LlK-Wg-oM5" secondAttribute="trailing" constant="40" id="TiI-cU-UOg"/>
+                            <constraint firstItem="7p0-pU-kkU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="61" id="dxR-Dm-dyP"/>
+                            <constraint firstItem="LlK-Wg-oM5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="haP-2o-Dj7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7p0-pU-kkU" secondAttribute="trailing" constant="40" id="qry-tX-icB"/>
+                            <constraint firstItem="vGg-Vl-a9A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="uIH-yE-aFG"/>
+                            <constraint firstItem="vGg-Vl-a9A" firstAttribute="top" secondItem="LlK-Wg-oM5" secondAttribute="bottom" constant="45" id="wNQ-g4-o63"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="guessLabel" destination="LlK-Wg-oM5" id="LuT-1O-B15"/>
+                        <outlet property="imageView" destination="7p0-pU-kkU" id="1Me-kO-Hzy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="steak night" width="1024" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
